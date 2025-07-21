@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Global styles */
+.emotion-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.emotion-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* Breathing circle animation */
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.breathe-circle {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+/* Emotion map animations */
+.emotion-node {
+  transition: all 0.3s ease;
+}
+
+.emotion-node:hover {
+  transform: scale(1.15);
+  filter: brightness(1.2);
+}
+
+/* Sound visualizer */
+@keyframes sound-wave {
+  0%, 100% { height: 4px; }
+  50% { height: 20px; }
+}
+
+.sound-bar {
+  animation: sound-wave 0.5s ease-in-out infinite;
+}
+
+.sound-bar:nth-child(2) { animation-delay: 0.1s; }
+.sound-bar:nth-child(3) { animation-delay: 0.2s; }
+.sound-bar:nth-child(4) { animation-delay: 0.3s; }
+.sound-bar:nth-child(5) { animation-delay: 0.4s; }
+
+/* Custom button styles */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Quiz progress bar */
+.progress-bar {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.5s ease;
+}
+
+/* Emotion wheel */
+.emotion-wheel {
+  position: relative;
+}
+
+.emotion-wheel::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Memory game cards */
+.memory-card {
+  perspective: 1000px;
+}
+
+.memory-card-inner {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.memory-card.flipped .memory-card-inner {
+  transform: rotateY(180deg);
+}
+
+.memory-card-front, .memory-card-back {
+  backface-visibility: hidden;
+}
+
+.memory-card-back {
+  transform: rotateY(180deg);
+}
+
+/* Journal entries */
+.journal-entry {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Theme transitions */
+.theme-transition {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+  .emotion-card {
+    margin-bottom: 1rem;
+  }
+  
+  .emotion-wheel {
+    transform: scale(0.8);
+  }
+}
+
+/* Accessibility improvements */
+.focus-visible:focus {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+/* Loading animations */
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
+}
+
+.loading-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 200px 100%;
+  animation: shimmer 1.5s infinite;
+}
