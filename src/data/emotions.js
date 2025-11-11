@@ -6,6 +6,7 @@ export const emotions = {
     color: 'from-yellow-400 to-orange-500',
     icon: '😊',
     category: 'pozytywne',
+    intensity: 'wysoka',
     definition: 'Radość to podstawowa emocja charakteryzująca się uczuciem szczęścia, zadowolenia i entuzjazmu. Jest to naturalna reakcja na pozytywne wydarzenia w naszym życiu.',
     examples: [
       'Spotkanie z ukochaną osobą po długiej rozłące',
@@ -26,7 +27,11 @@ export const emotions = {
       'Prowadzenie dziennika wdzięczności',
       'Świętowanie małych sukcesów',
       'Praktykowanie uważności'
-    ]
+    ],
+    soundscape: {
+      title: 'Dźwięki Radości',
+      description: 'Wesoła melodia z śpiewem ptaków i delikatnym brzęczeniem'
+    }
   },
   smutek: {
     id: 'smutek',
@@ -35,6 +40,7 @@ export const emotions = {
     color: 'from-blue-500 to-indigo-600',
     icon: '😢',
     category: 'trudne',
+    intensity: 'średnia',
     definition: 'Smutek to emocja, która pojawia się w odpowiedzi na stratę, rozczarowanie lub trudne doświadczenia. Jest naturalną częścią ludzkiego doświadczenia.',
     examples: [
       'Śmierć bliskiej osoby',
@@ -55,7 +61,11 @@ export const emotions = {
       'Szukanie wsparcia u bliskich',
       'Wyrażanie emocji przez sztukę',
       'Praktykowanie samoopieki'
-    ]
+    ],
+    soundscape: {
+      title: 'Dźwięki Smutku',
+      description: 'Delikatna melodia fortepianu z odgłosem deszczu'
+    }
   },
   strach: {
     id: 'strach',
@@ -64,6 +74,7 @@ export const emotions = {
     color: 'from-gray-600 to-gray-800',
     icon: '😨',
     category: 'ochronne',
+    intensity: 'wysoka',
     definition: 'Strach to podstawowa emocja mająca na celu ochronę nas przed potencjalnym niebezpieczeństwem. Jest kluczowy dla naszego przetrwania.',
     examples: [
       'Reakcja na nagły hałas',
@@ -84,7 +95,11 @@ export const emotions = {
       'Techniki uziemiania',
       'Stopniowe konfrontowanie się z lękiem',
       'Szukanie wsparcia profesjonalnego'
-    ]
+    ],
+    soundscape: {
+      title: 'Dźwięki Strachu',
+      description: 'Napięta muzyka z niskimi tonami i echem'
+    }
   },
   zlosc: {
     id: 'zlosc',
@@ -93,6 +108,7 @@ export const emotions = {
     color: 'from-red-500 to-red-700',
     icon: '😠',
     category: 'energetyczne',
+    intensity: 'wysoka',
     definition: 'Złość to emocja, która mobilizuje nas do działania w sytuacjach niesprawiedliwości lub gdy nasze granice są przekraczane.',
     examples: [
       'Doświadczenie niesprawiedliwości',
@@ -113,7 +129,11 @@ export const emotions = {
       'Asertywna komunikacja',
       'Techniki relaksacyjne',
       'Identyfikacja przyczyn złości'
-    ]
+    ],
+    soundscape: {
+      title: 'Dźwięki Złości',
+      description: 'Intensywne bębny i gwałtowne dźwięki'
+    }
   },
   spokoj: {
     id: 'spokoj',
@@ -122,6 +142,7 @@ export const emotions = {
     color: 'from-green-400 to-teal-500',
     icon: '😌',
     category: 'równoważące',
+    intensity: 'niska',
     definition: 'Spokój to stan emocjonalnej równowagi, charakteryzujący się poczuciem harmonii, bezpieczeństwa i wewnętrznego pokoju.',
     examples: [
       'Medytacja w ciszy',
@@ -142,7 +163,11 @@ export const emotions = {
       'Czas w naturze',
       'Ograniczenie bodźców',
       'Praktyki mindfulness'
-    ]
+    ],
+    soundscape: {
+      title: 'Dźwięki Spokoju',
+      description: 'Łagodne brzmienie mis tybetańskich i szum fal'
+    }
   },
   ekscytacja: {
     id: 'ekscytacja',
@@ -151,6 +176,7 @@ export const emotions = {
     color: 'from-purple-500 to-pink-500',
     icon: '🤩',
     category: 'energetyczne',
+    intensity: 'wysoka',
     definition: 'Ekscytacja to intensywne uczucie entuzjazmu i oczekiwania, które mobilizuje nas do działania i eksploracji.',
     examples: [
       'Oczekiwanie na ważne wydarzenie',
@@ -171,7 +197,11 @@ export const emotions = {
       'Dzielenie się entuzjazmem',
       'Planowanie i organizacja',
       'Ćwiczenia oddechowe dla uspokojenia'
-    ]
+    ],
+    soundscape: {
+      title: 'Dźwięki Ekscytacji',
+      description: 'Energetyczna muzyka z żywymi rytmami'
+    }
   }
 };
 
@@ -179,26 +209,31 @@ export const emotionCategories = {
   pozytywne: {
     name: 'Pozytywne',
     color: 'from-yellow-400 to-orange-500',
+    icon: '😊',
     description: 'Emocje, które przynoszą radość i energię'
   },
   trudne: {
     name: 'Trudne',
     color: 'from-blue-500 to-indigo-600',
+    icon: '😢',
     description: 'Emocje wymagające szczególnej uwagi i wsparcia'
   },
   ochronne: {
     name: 'Ochronne',
     color: 'from-gray-600 to-gray-800',
+    icon: '🛡️',
     description: 'Emocje chroniące nas przed zagrożeniem'
   },
   energetyczne: {
     name: 'Energetyczne',
     color: 'from-red-500 to-purple-500',
+    icon: '⚡',
     description: 'Emocje mobilizujące do działania'
   },
   równoważące: {
     name: 'Równoważące',
     color: 'from-green-400 to-teal-500',
+    icon: '🧘',
     description: 'Emocje przywracające harmonię i spokój'
   }
 };
